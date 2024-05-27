@@ -1,0 +1,166 @@
+@import url("reset.css");
+.kuriza{
+    overflow: clip;
+    position: relative;
+    width: 500px;
+    aspect-ratio: 905 / 1280;
+    background: url("../img/bg.jpg") 0 0 / 100%;
+    margin: 0 auto;
+}
+
+.zerna{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    animation: zerno-run 9s linear forwards;
+}
+.zerno{
+    width: 10%;
+    position: absolute;
+    
+}
+.zerno:nth-child(1){
+    right: 20%;
+    bottom: 20%;
+    animation: zerno-hide 0.1s linear 2.5s forwards;
+}
+.zerno:nth-child(2){
+    right: 45%;
+    bottom: 40%;
+    animation: zerno-hide 0.1s linear 3s forwards;
+}
+.zerno:nth-child(3){
+    right: 20%;
+    bottom: 70%;
+    animation: zerno-hide 0.1s linear 3.6s forwards;
+}
+.zerno:nth-child(4){
+    right: 45%;
+    bottom: 120%;
+    animation: zerno-hide 0.1s linear 4.7s forwards;
+}
+.zerno:nth-child(5){
+    right: 40%;
+    bottom: 140%;
+    animation: zerno-hide 0.1s linear 5.1s forwards;
+}
+.zerno:nth-child(6){
+    right: 70%;
+    bottom: 170%;
+    animation: zerno-hide 0.1s linear 5.8s forwards;
+}
+.zerno:nth-child(7){
+    right: 20%;
+    bottom: 220%;
+    animation: zerno-hide 0.1s linear 6.9s forwards;
+}
+.zerno:nth-child(8){
+    right: 40%;
+    bottom: 240%;
+    animation: zerno-hide 0.1s linear 7.3s forwards;
+}
+.zerno:nth-child(9){
+    right: 70%;
+    bottom: 270%;
+    animation: zerno-hide 0.1s linear 8s forwards;
+}
+
+.chiken{
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    animation: chiken 6s linear 2s forwards, chiken-finish 2s linear 8.2s forwards, chiken-lopnula 5s linear 10.2s forwards;
+}
+.qr{
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: qr 1s ease 15s forwards;
+}
+
+
+@keyframes qr{
+    0%{
+       
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes zerno-run{
+    0%{
+        transform: translate(0,-100%);
+    }
+    100%{
+        transform: translate(0,300%);
+    }
+}
+
+@keyframes zerno-hide{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes chiken{
+    0%{
+        transform: translateX(-50%) scale(1);
+        left: 50%;
+    }
+    10%{
+        left: 75%;
+    }
+    20%{
+        left: 50%;
+    }
+    30%{
+        left: 75%; 
+    }
+    40%{
+        left: 50%;
+    }
+    50%{
+        left: 53%;
+    }
+    67%{
+        left: 23%;
+    }
+    80%{
+        left: 75%;
+    }
+    95%{
+        left: 50%;
+    }
+    100%{
+        left: 23%;
+        transform: translateX(-50%) scale(1.3);
+    }
+}
+
+@keyframes chiken-finish{
+    0%{}
+    100%{
+        bottom: 45%;
+        transform: translateX(55%) scale(1.3);
+    };
+}
+
+@keyframes chiken-lopnula{
+ 0%{}
+ 100%{
+    transform: translateX(55%) scale(10);
+ }
+}
